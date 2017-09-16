@@ -7,6 +7,14 @@ MongoClient.connect(url, function(err, db) {
         { name: 'John', address: 'Highway 71' },
         { name: 'Peter', address: 'Lowstreet 4' },
         { name: 'Amy', address: 'Apple st 652' },
+        { name: 'Hannah', address: 'Mountain 21' },
+        { name: 'John', address: 'Highway 71' },
+        { name: 'Peter', address: 'Lowstreet 4' },
+        { name: 'Amy', address: 'Apple st 652' },
+        { name: 'Hannah', address: 'Mountain 21' },
+        { name: 'John', address: 'Highway 71' },
+        { name: 'Peter', address: 'Lowstreet 4' },
+        { name: 'Amy', address: 'Apple st 652' },
         { name: 'Hannah', address: 'Mountain 21' }
     ];
     db.collection("customers").insertMany(myObj, function(err, res) {
