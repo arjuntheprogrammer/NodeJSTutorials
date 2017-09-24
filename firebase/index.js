@@ -26,12 +26,27 @@ var messagesRef = ref.child('messages');
 // });
 
 
-
+//on update in database will display all records
 // var logs;
 // ref.child('logs').on('value', function(snap) {
 //     logs = snap.val();
 //     console.log(logs);
 // });
+
+
+//on update in database will display just updated records
+ref.child('logs').on('child_added', function(snap) {
+    console.log("added", snap.val());
+});
+
+ref.child('logs').on('child_removed', function(snap) {
+    console.log("removed", snap.val());
+});
+
+ref.child('logs').on('child_changed', function(snap) {
+    console.log("changed", snap.val());
+})
+
 
 
 // messagesRef.push({
