@@ -9,6 +9,7 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: false }));
 // app.use(multer({ dest: '/tmp/'}));
 var upload = multer({ dest: './uploads' })
+
 app.get('/index.htm', function(req, res) {
     res.sendFile(__dirname + "/" + "fileUpload.htm");
 })
